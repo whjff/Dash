@@ -1,0 +1,26 @@
+[package]
+name = "derive"
+default-run = "derive"
+version = "2.0.0"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "1.8", features = ["api-all", "system-tray"] }
+tauri-plugin-single-instance = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
+tokio = { version = "1.40", features = ["macros", "time", "sync", "rt-multi-thread"] }
+directories = "5.0"
+sysinfo = "0.29"
+winreg = "0.52"
+windows = { version = "0.44", features = ["Media_Control", "Media_Playback", "Foundation_Collections", "Foundation", "Win32_System_WinRT"] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
+
+[profile.release]
+strip = true

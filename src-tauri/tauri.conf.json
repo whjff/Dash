@@ -1,0 +1,44 @@
+{
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:5173",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "Dash",
+    "version": "2.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true
+    },
+    "bundle": {
+      "active": true,
+      "category": "Utility",
+      "icon": [
+        "./icons/icon.ico",
+        "./icons/icon.png"
+      ],
+      "identifier": "com.derive.app",
+      "shortDescription": "Local multi-game session and Spotify overlay",
+      "targets": [
+        "msi"
+      ],
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": "default-src 'self' data: object-src 'none'"
+    },
+    "systemTray": {
+      "iconPath": "./icons/icon.ico"
+    },
+    "updater": {
+      "active": false
+    }
+  }
+}
