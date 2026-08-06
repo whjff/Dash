@@ -1,3 +1,9 @@
+# Dash Change History
+
+> Versions 1.4.x through 2.0.0 were internal development and pre-release milestones used during Dash's architecture, cleanup, and stability work.
+>
+> The first public release is **Dash 1.0.0**.
+
 # Dash change history
 
 # Dash 1.9.0 — Stabilization Release
